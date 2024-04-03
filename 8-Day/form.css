@@ -1,0 +1,12 @@
+label {
+    color: brown;
+  }
+  button {
+    color: blue;
+  }
+  .login {
+    color: red;
+  }
+  #email {
+    color: orange;
+  }

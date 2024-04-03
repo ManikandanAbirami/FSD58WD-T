@@ -1,0 +1,10 @@
+div {
+    background-color: blue;
+    color: antiquewhite;
+  }
+
+  span {
+    background-color: brown;
+    color: burlywood;
+    display: none;
+  }

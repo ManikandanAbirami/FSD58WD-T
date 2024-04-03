@@ -1,0 +1,49 @@
+Exercise 1: Working with Literals and Identifiers
+_________________________________________________
+
+Objective: Create variables with appropriate identifiers and assign different types of literals to them.
+
+1. Create a variable named 'city' abd assign a string literal that represents the name of a city.
+2. Create a variable named 'population' abd assign a numeric literal that represents the
+   population of the city.
+3. Create a variable name 'isCapital' and assign a boolean literal to indicate whether the city is a capital.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________
+Exercise 2: Arithmetic Operators
+_________________________________________________
+
+Objective: Perform basic arithmetic operations with numbers.
+
+1. Create two numeric variables, 'a' and 'b', assigning them values 10 and 5, respectively.
+2. Calculate and log the sum, difference, product, and quotient of 'a' and 'b'.
+3. Increment 'a' by one using the increment operator and decrement 'b' by one using the decrement operator.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercise 3: String Concatenation
+_________________________________________________
+
+Objective: Concatenate strings to create meaningful sentences.
+
+1. Create three string variables: 'firstName', 'lastName', and 'occupation'.
+2. Concatenate them into a sentence like "John Doe is a software developer" and log the result.
+____________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercise 4: Using Comparison Operators
+_________________________________________________
+
+Objective: Compare two values using comparison operators.
+
+1. Create two variables, 'x' and 'y', and assign them different numeric values.
+2. Compare whether 'x' is greater than 'y' and log the result.
+3. Check if 'x' is equal to 'y' and log the result (use both '==' and '===' to see the difference).
+____________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercise 5: Logical Operators
+_________________________________________________
+
+Objective: Use logical operators to evaluate multiple conditions.
+
+1. Create three boolean variables, 'isAdult', 'hasJob', and 'hasDrivingLicense'.
+2. Check if the person is an adult and has a job or a driving license and log the result.
+____________________________________________________________________________________________________________________________________________________________________________________________________
