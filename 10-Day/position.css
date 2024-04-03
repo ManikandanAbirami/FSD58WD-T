@@ -1,0 +1,23 @@
+p {
+    font-size: 1.75rem;
+    margin: 1.5rem;
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+#para {
+    background-color: lightblue;
+}
+
+#box {
+    position: fixed;
+    left: 10px;
+    width: 15rem;
+    height: 10rem;
+    border: 2px solid black;
+    background-color: lightsalmon;
+}
+
+#long {
+    background-color: lightseagreen;
+}
