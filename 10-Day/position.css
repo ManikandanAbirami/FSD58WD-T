@@ -9,10 +9,15 @@ p {
     background-color: lightblue;
 }
 
+section{
+    /* position: static; */
+}
+
 #box {
-    position: fixed;
-    right: 30px;
-    bottom: 50px;
+    position: absolute;
+    top: 60px;
+    left: 90px;
+    /* bottom: 90px; */
     width: 15rem;
     height: 10rem;
     border: 2px solid black;

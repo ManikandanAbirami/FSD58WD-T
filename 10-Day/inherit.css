@@ -1,0 +1,16 @@
+main {
+    color: red;
+    border: 2px solid blueviolet;
+}
+
+button{
+    color: inherit;
+}
+
+h1 {
+    color: initial;
+    border: inherit;
+}
+body {
+    /* background-image: radial-gradient(circle, red, yellow, green); */
+}
