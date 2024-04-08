@@ -1,11 +1,11 @@
 section {
     display: flex;
-    /* flex-direction: column;
-    flex-wrap: wrap; */
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    align-content: center;
     gap: 30px;
     height: 90vh;
     border: 2px dotted purple;

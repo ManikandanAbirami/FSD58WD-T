@@ -1,0 +1,25 @@
+#parent {
+    width: 75%;
+    border: 2px solid lightgray;
+}
+
+#red {
+    width: 100%;
+    background-color: red;
+}
+
+#blue {
+    width: 100vw;
+    background-color: blue;
+}
+
+#green {
+    width: 10rem;
+    /* width: 160px; */
+    background-color: green;
+}
+
+div{
+    margin: 10px;
+    color: white;
+}
