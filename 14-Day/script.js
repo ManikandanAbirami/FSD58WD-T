@@ -7,7 +7,11 @@ function openNewWindow() {
   var url = document.getElementById("urlInput").value;
   if (url) {
     // Check if the URL field is not empty
-    myWindow = window.open(url, "_blank");
+    myWindow = window.open(
+      url,
+      "_blank",
+      "width=400px,height=600px,top=200px,left=400px"
+    );
     setTimeout(function () {
       if (myWindow) {
         myWindow.close();
@@ -16,7 +20,7 @@ function openNewWindow() {
         // alert("No window is currently open!!");
         appendAlert("No window is currently open!!", "success");
       }
-    }, 100000);
+    }, 300000);
   } else {
     // alert("Please enter a URL!!");
     appendAlert("Please enter a URL!!", "success");
@@ -38,7 +42,7 @@ function closeWindow() {
 // Function to check if the window is open
 
 function checkWindowStatus() {
-  if (myWindow && !myWindow.closed) {
+  if (myWindow && myWindow.closed) {
     // alert("the window is still open.");
     appendAlert("The window is still open.", "success");
   } else {
@@ -63,6 +67,37 @@ function startStatusCheck() {
       clearInterval(statusIntervalId); // Stop checking once the window is closed
     }
   }, 5000); // setInterval( function, timing)
+}
+
+function getScreenInfo(event) {
+  console.log("Screen Info Event:", event);
+  appendAlert(
+    "Screen width:" + window.innerWidth + ", Height: " + window.innerHeight,
+    "success"
+  );
+}
+
+function reloadWindow() {
+  //   if (myWindow && !myWindow.closed) {
+  window.location.reload();
+  //   }
+}
+
+function moveWindow(xPos, yPos) {
+  //   if (myWindow && !myWindow.closed) {
+  window.moveTo(xPos, yPos);
+  //   }
+}
+
+function resizeWindow(width, height) {
+  //   if (myWindow && !myWindow.closed) {
+  myWindow.resizeTo(width, height);
+  //   }
+}
+
+function display(event, str) {
+  console.log("Key press Event:", event);
+  appendAlert(str + " - Event triggered!!!", "success");
 }
 
 const alertPlaceholder = document.getElementById("liveAlertPlaceholder");

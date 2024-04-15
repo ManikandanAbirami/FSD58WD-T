@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#element, #displaySpan, #coordinateSpan, #editableContent 
+{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+h1:hover {
+    cursor: pointer;
+}

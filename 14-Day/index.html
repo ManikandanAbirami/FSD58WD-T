@@ -12,13 +12,24 @@
   <body>
     <h1>Window Manager</h1>
     <label for="urlInput">Enter URL:</label>
-    <input type="text" id="urlInput" placeholder="Enter URL here..." />
+    <input
+      type="text"
+      id="urlInput"
+      placeholder="Enter URL here..."
+      onkeydown="display(event,'onKeyDown')"
+      onkeyup="display('onKeyUp')"
+      onkeypress="display('onKeyPress')"
+    />
     <br /><br />
     <button onclick="openNewWindow()">Open Window</button>
     <button onclick="closeWindow()">Close Window</button>
     <button onclick="checkWindowStatus()">Check Window</button>
     <button onclick="startStatusCheck()">Start Continuous Status Check</button>
-    <br />
+    <br /><br />
+    <button onclick="resizeWindow(640, 480)">Resize Window to 640x480</button>
+    <button onclick="moveWindow(100, 100)">Move window to 100,100</button>
+    <button ondblclick="reloadWindow()">Reload Window</button>
+    <button onclick="getScreenInfo(event)">Get Screen Info</button>
     <div id="liveAlertPlaceholder"></div>
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
