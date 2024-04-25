@@ -31,20 +31,27 @@ const done = () => {
 //   });
 // };
 
-const getAddress = () => {
-  getStates()
-    .then(
-      (state) => {
-        // console.log("Get cities", getCities());
-        return getCities();
-      },
-      (err) => {
-        console.log(err);
-      }
-    )
-    .then(() => {
-      return done();
-    });
+const getAddress = async () => {
+  // getStates()
+  //   .then(
+  //     (state) => {
+  //       // console.log("Get cities", getCities());
+  //       return getCities();
+  //     },
+  //     (err) => {
+  //       console.log(err);
+  //     }
+  //   )
+  //   .then(() => {
+  //     return done();
+  //   });
+  try {
+    state = await getStates();
+    city = await getCities();
+    done();
+  } catch (error) {
+    console.log("Logging the erroe from catch block:", error);
+  }
 };
 
 getAddress();

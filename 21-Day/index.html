@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React- Day -1: ES5 vs ES6</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">JavaScript Concepts</h1>
+      <!-- Scoping var, let, and const Example Card-->
+      <div class="card">
+        <div class="card-header">Scoping - var vs let vs const</div>
+        <div class="card-body">
+          <button class="btn btn-primary" onclick="testVar()">Test var</button>
+          <button class="btn btn-primary" onclick="testLet()">Test let</button>
+          <button class="btn btn-primary" onclick="testConst()">
+            Test const
+          </button>
+        </div>
+        <div id="output" class="card-footer text-muted"></div>
+      </div>
+      <!-- Arrow Functions Example Card-->
+      <div class="card">
+        <div class="card-header">Arrow Functions</div>
+        <div class="card-body">
+          <p>Click the button to test arrow functions with array methods:</p>
+          <button class="btn btn-success" onclick="testArrowFunctions()">
+            Test Arrow Functions
+          </button>
+        </div>
+        <div id="arrowOutput" class="card-footer text-muted"></div>
+      </div>
+
+      <!-- This Example Card-->
+      <div class="card">
+        <div class="card-header">The 'this' keyword and Lexical Soping</div>
+        <div class="card-body">
+          <button id="traditionalBtn" class="btn btn-info">
+            Traditional Function
+          </button>
+          <button id="arrowBtn" class="btn btn-info">Arrow Function</button>
+          <p id="traditionalOutput">Waiting for traditional function...</p>
+          <p id="thisArrowOutput">Waiting for arrow function...</p>
+        </div>
+      </div>
+
+      <!-- Template Literals-->
+      <div class="card">
+        <div class="card-header">Template Literal</div>
+        <div class="card-body">
+          <button
+            id="traditionalBtn"
+            class="btn btn-warning"
+            onclick="showTemplateLiterals()"
+          >
+            Show Template Literals
+          </button>
+
+          <p id="templateOutput"></p>
+        </div>
+      </div>
+
+      <!-- Spread & Rest Parameters-->
+      <div class="card">
+        <div class="card-header">Spread & Rest Parameters</div>
+        <div class="card-body">
+          <button
+            id="spreadBtn"
+            class="btn btn-secondary"
+            onclick="testSpread()"
+          >
+            Test Spread
+          </button>
+          <button
+            id="restBtn"
+            class="btn btn-secondary"
+            onclick="testRest(2,3,4,5,6,7,8)"
+          >
+            Test Rest
+          </button>
+
+          <p id="spreadRestOutput"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./scoping_var_let_const.js"></script>
+    <script src="./arrow_functions.js"></script>
+    <script src="./this.js"></script>
+    <script src="./template.js"></script>
+    <script src="./spreadRest.js"></script>
+  </body>
+</html>
