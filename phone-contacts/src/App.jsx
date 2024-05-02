@@ -1,27 +1,34 @@
-import Card from "./Card";
+import Header from "./Header";
+import "./index.css"
 
 
 function App() {
 
-  let name = "Manikandan Anbalgan";
-  let phone = 1231231234;
+  let handleClick = () => {
+    alert("Add button clicked!!!");
+  }
+
+  let demoValues = [
+    { id: 100, propertyOne: "ValueOne", propertyTwo: "ValueTwo", propertyThree: "ValueThree" },
+    { id: 101, propertyOne: "ValueOneMore", propertyTwo: "ValueTwoMore", propertyThree: "ValueThreeMore" }];
 
   return (
-    <>
-      {/* <div>Phone Contact Application</div>
-      <button>Add</button>
-      <div className="main">
-        <span>Name: {name}</span><br />
-        <span>Phone: {phone}</span>
-      </div> */}
-      <div style={{ display: "flex" }}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+    <div className="container">
+      {false ? <Header /> : <span>No Header</span>}
+      <div className="body-container">
+        <button onClick={handleClick} className="btn btn-success">Add</button>
+        <ul>
+          {demoValues.map((item, index) => (
+            <li key={item.id}>
+              <span>{item.propertyThree + " "}</span>
+              <span>{item.propertyOne + " "}</span>
+              <span>{item.propertyTwo}</span>
+            </li>
+          ))}
+
+        </ul>
       </div>
-
-
-    </>
+    </div>
   )
 }
 

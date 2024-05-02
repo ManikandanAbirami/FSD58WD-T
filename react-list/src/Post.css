@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+  }
+  
+  .row {
+    height: 100%;
+    align-items: center;
+  }
+  
+  #pricing {
+    height: 100%;
+    padding: 100px;
+    text-align: center;
+  }
+  
+  .card {
+    border: 1px solid black;
+  }
+  
+  .card-header {
+    color: white;
+    background-color: black;
+  }
+  
+  .pricing-column {
+    padding: 3% 2%;
+  }
+  
+  .btn-dark {
+    background-color: black;
+  }
+  
+  .btn-dark:hover {
+    background-color: #343a40;
+  }
