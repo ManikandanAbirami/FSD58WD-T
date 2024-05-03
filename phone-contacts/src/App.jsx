@@ -1,33 +1,39 @@
-import Header from "./Header";
-import "./index.css"
-
+import AddContacts from "./AddContacts"
+import ShowContacts from "./ShowContacts"
+import "./App.css"
+import StateComponent from "./StateComponent";
 
 function App() {
 
-  let handleClick = () => {
-    alert("Add button clicked!!!");
-  }
-
-  let demoValues = [
-    { id: 100, propertyOne: "ValueOne", propertyTwo: "ValueTwo", propertyThree: "ValueThree" },
-    { id: 101, propertyOne: "ValueOneMore", propertyTwo: "ValueTwoMore", propertyThree: "ValueThreeMore" }];
+  let phoneContactList = [
+    {
+      id: 1,
+      name: "Manikandan Anbalagan",
+      phone: "566565656"
+    },
+    {
+      id: 2,
+      name: "M S Dhoni",
+      phone: "3232323232"
+    },
+    {
+      id: 3,
+      name: "L Balaji",
+      phone: "55555555"
+    },
+    {
+      id: 4,
+      name: "K L Rahul",
+      phone: "4444444444"
+    }
+  ];
 
   return (
-    <div className="container">
-      {false ? <Header /> : <span>No Header</span>}
-      <div className="body-container">
-        <button onClick={handleClick} className="btn btn-success">Add</button>
-        <ul>
-          {demoValues.map((item, index) => (
-            <li key={item.id}>
-              <span>{item.propertyThree + " "}</span>
-              <span>{item.propertyOne + " "}</span>
-              <span>{item.propertyTwo}</span>
-            </li>
-          ))}
-
-        </ul>
-      </div>
+    <div>
+      {/* <ShowContacts contactList={phoneContactList} /> */}
+      <hr />
+      {/* <AddContacts /> */}
+      <StateComponent />
     </div>
   )
 }
