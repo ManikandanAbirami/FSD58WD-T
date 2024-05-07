@@ -1,0 +1,10 @@
+#tree {
+    color: green;
+    transition: color 0.5s case;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
