@@ -5,7 +5,7 @@ import React from 'react'
 function UserItem({ user, onEdit, onDelete }) {
     return (
         <Grid item xs={12} sm={6} md={4}>
-            <Card style={{ backgroundColor: 'lavender' }}>
+            <Card style={{ backgroundColor: 'lightgrey' }}>
                 <CardContent>
                     <Typography variant='h5' style={{ color: 'black' }}>
                         {user.name}
