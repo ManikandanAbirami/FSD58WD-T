@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from 'react'
-import { Button, Dialog, DialogActions, DialogTitle, Grid, Paper } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogTitle, Grid, Paper, Typography } from '@mui/material'
 import './App.css'
 
 // Initial state of the game
@@ -22,12 +22,13 @@ function reducer(state, action) {
             const boardCopy = [...state.board];
             boardCopy[action.index] = state.xIsNext ? 'X' : 'O';
             const winner = calculateWinner(boardCopy);
+            const isBoardFull = boardCopy.every(cell => cell !== null); // Check if all cells are filled
             return {
                 ...state,
                 board: boardCopy,
                 xIsNext: !state.xIsNext,
                 winner: winner,
-                openDialog: !!winner // Opens the dialog is there is a winner
+                openDialog: !!winner || isBoardFull// Opens the dialog is there is a winner or draw
             }
         case 'reset':
             return { ...initialState, board: Array(9).fill(null) }; // Reset the game itself
@@ -59,6 +60,12 @@ function TicTacToe() {
     const [state, dispatch] = useReducer(reducer, initialState);
     return (
         <div className='game'>
+            <Typography variant="h5" component="h2">
+                Player1: X
+            </Typography>
+            <Typography variant="h5" component="h2">
+                Player2: O
+            </Typography>
             <Grid container spacing={2} justifyContent="center" style={{ maxWidth: 400 }}>
                 {state.board.map((cell, index) => (
                     <Grid item xs={4} key={index}>
