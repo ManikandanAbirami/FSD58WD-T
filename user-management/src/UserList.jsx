@@ -25,6 +25,7 @@ function UserList() {
 
     const addUser = async (user) => {
         try {
+            console.log("Axios check", axios.post(`https://jsonplaceholder.typicode.com/users/`, user));
             const response = await axios.post(`https://jsonplaceholder.typicode.com/users/`, user);
             setUsers([...users, response.data]);
             setEditingUser(null);
@@ -67,7 +68,7 @@ function UserList() {
     }
     return (
         <Container>
-            <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
+            <Paper style={{ padding: '20px', marginTop: '20px' }}>
                 <Typography variant='h4' gutterBottom>User Management</Typography>
                 <Grid container spacing={3}>
                     {users.map((user) => (
