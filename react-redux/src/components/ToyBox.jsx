@@ -2,6 +2,9 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { addToy, removeToy } from '../redux/toySlice'; // Import actions
 
+// We create a React component to display our toys and buttons to add/remove toys
+// This component talks to the Redux store to update the toy box
+
 function ToyBox() {
     const toys = useSelector((state) => state.toys.toys) // Get toys from the Redux store
     const dispatch = useDispatch();

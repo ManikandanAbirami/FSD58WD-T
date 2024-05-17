@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// We define how to add and remove toys using 'createSlice'.
+// These are the instructions for our parents(reducers)
+
 const toySlice = createSlice({
   name: "toys",
   initialState: {
