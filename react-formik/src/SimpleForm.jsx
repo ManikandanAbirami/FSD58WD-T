@@ -28,7 +28,7 @@ function SimpleForm() {
                 <div>
                     <label htmlFor="name">Name</label>
                     <Field type="text" id="name" name="name"></Field>
-                    <ErrorMessage name="name" component="div"></ErrorMessage>
+                    <ErrorMessage name="name" component="span"></ErrorMessage>
                 </div>
                 <div>
                     <label htmlFor="email">Email</label>
@@ -38,7 +38,7 @@ function SimpleForm() {
                 <div>
                     <label htmlFor="password">Password</label>
                     <Field type="password" id="password" name="password"></Field>
-                    <ErrorMessage name="password" component="div"></ErrorMessage>
+                    <ErrorMessage name="password" component="p"></ErrorMessage>
                 </div>
                 <button type='submit'>Submit</button>
             </Form>

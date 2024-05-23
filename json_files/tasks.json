@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "task_name": "Build a Simple Calculator",
+        "description": "Create a basic calculator using HTML, CSS, and JavaScript.",
+        "due_date": "2024-05-05"
+    },
+    {
+        "id": "2",
+        "task_name": "Weather App",
+        "description": "Develop a weather application using APIs.",
+        "due_date": "2024-05-10"
+    },
+    {
+        "id": "3",
+        "task_name": "Todo List",
+        "description": "Implement a todo list with CRUD operations.",
+        "due_date": "2024-05-15"
+    }
+]

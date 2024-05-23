@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "user_id": "1",
+        "date": "2024-05-01",
+        "status": "present"
+    },
+    {
+        "id": "2",
+        "user_id": "2",
+        "date": "2024-05-01",
+        "status": "absent"
+    },
+    {
+        "id": "3",
+        "user_id": "1",
+        "date": "2024-05-02",
+        "status": "present"
+    }
+]

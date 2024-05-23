@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "user_id": "1",
+        "problem_id": "101",
+        "status": "completed"
+    },
+    {
+        "id": "2",
+        "user_id": "2",
+        "problem_id": "102",
+        "status": "attempted"
+    },
+    {
+        "id": "3",
+        "user_id": "1",
+        "problem_id": "103",
+        "status": "completed"
+    }
+]

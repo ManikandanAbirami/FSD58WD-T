@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "Dr. Smith",
+        "expertise": "JavaScript, Node.js",
+        "email": "smith@mentors.com"
+    },
+    {
+        "id": "2",
+        "name": "Ms. Johnson",
+        "expertise": "Python, Data Science",
+        "email": "johnson@mentors.com"
+    },
+    {
+        "id": "3",
+        "name": "Mr. Lee",
+        "expertise": "DevOps, AWS",
+        "email": "lee@mentors.com"
+    }
+]
