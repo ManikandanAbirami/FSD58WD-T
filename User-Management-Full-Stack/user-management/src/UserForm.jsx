@@ -23,7 +23,7 @@ function UserForm({ user, onSave, onCancel }) {
 
     return (
         <Dialog open onClose={onCancel}>
-            <DialogTitle>{user.id ? 'Edit User' : 'Add User'}</DialogTitle>
+            <DialogTitle>{user._id ? 'Edit User' : 'Add User'}</DialogTitle>
             <DialogContent>
                 <TextField
                     autoFocus

@@ -19,7 +19,7 @@ function UserItem({ user, onEdit, onDelete }) {
                         Edit
                     </Button>
                     <Button size="small" color='secondary'
-                        onClick={() => onDelete(user.id)}>
+                        onClick={() => onDelete(user._id)}>
                         Delete
                     </Button>
                 </CardActions>

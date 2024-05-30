@@ -1,21 +1,24 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const userRoutes = require("./routes/userRoutes");
+require("dotenv").config();
 const app = express();
 const PORT = 3000;
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 //Routes
 app.use("/apiUser", userRoutes);
 
 mongoose
-  .connect("mongodb://localhost:27017/user-crud")
+  .connect(process.env.MONGODB)
   .then(() => {
     console.log("connected to MongoDB");
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
   })
