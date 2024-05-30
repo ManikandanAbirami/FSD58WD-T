@@ -16,7 +16,7 @@ function UserList() {
     const fetchUsers = async () => {
         try {
             // const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-            const response = await axios.get("http://localhost:3000/apiUser/users");
+            const response = await axios.get("https://fsd58wd-t-2.onrender.com/apiUser/users");
             setUsers(response.data);
         } catch (error) {
             console.log('Error fetching users:', error);
@@ -28,7 +28,7 @@ function UserList() {
         try {
             // console.log("Axios check", axios.post(`https://jsonplaceholder.typicode.com/users/`, user));
             // const response = await axios.post(`https://jsonplaceholder.typicode.com/users/`, user);
-            const response = await axios.post(`http://localhost:3000/apiUser/users/`, user);
+            const response = await axios.post(`https://fsd58wd-t-2.onrender.com/apiUser/users/`, user);
             setUsers([...users, response.data]);
             setEditingUser(null);
             showSnackbar('User addes successfully', 'success');
@@ -40,7 +40,7 @@ function UserList() {
 
     const updateUser = async (user) => {
         try {
-            await axios.put(`http://localhost:3000/apiUser/users/${user._id}`, user);
+            await axios.put(`https://fsd58wd-t-2.onrender.com/apiUser/users/${user._id}`, user);
             fetchUsers();
             setEditingUser(null);
             showSnackbar('User updated successfully', 'success');
@@ -52,7 +52,7 @@ function UserList() {
 
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/apiUser/users/${id}`);
+            await axios.delete(`https://fsd58wd-t-2.onrender.com/apiUser/users/${id}`);
             fetchUsers();
             showSnackbar('User deleted Successfully', 'success');
         } catch (error) {
