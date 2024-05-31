@@ -16,7 +16,7 @@ function UserList() {
     const fetchUsers = async () => {
         try {
             // const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-            const response = await axios.get("https://fsd58wd-t-2.onrender.com/apiUser/users");
+            const response = await axios.get("http://localhost:3000/apiUser/users");
             setUsers(response.data);
         } catch (error) {
             console.log('Error fetching users:', error);
