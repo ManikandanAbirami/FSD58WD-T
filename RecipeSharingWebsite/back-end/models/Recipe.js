@@ -6,8 +6,8 @@ const recipeSchema = new mongoose.Schema(
     ingredients: [String],
     instructions: String,
     category: String,
-    images: [String],
-    videos: [String],
+    images: [String], //Array of image URLs
+    videos: [String], //Array of video URLs
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
     ratings: [{ user: { type: mongoose.Schema.Types.ObjectId, ref: "User" } }],

@@ -1,0 +1,21 @@
+body {
+  background-color: #f0f2f5;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.ant-layout-content {
+  padding: 24px;
+}
+
+.ant-card {
+  margin: 16px 0;
+}
