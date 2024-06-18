@@ -2,6 +2,7 @@ const Recipe = require("../models/Recipe");
 const express = require("express");
 const router = express.Router();
 const authMiddleware = require("../middleware/auth");
+const checkRole = require("../middleware/role");
 const cloudinary = require("../config/cloudinary");
 const multer = require("multer");
 
@@ -15,6 +16,7 @@ const upload = multer({ storage });
 router.post(
   "/recipes",
   authMiddleware,
+  checkRole(["admin"]),
   upload.array("media"),
   async (req, res) => {
     const { title, description, ingredients, instructions, category } =
@@ -69,27 +71,48 @@ router.get("/recipes", async (req, res) => {
   }
 });
 
-//Update Recipe
-router.put("/recipes/:recipeId", authMiddleware, async (req, res) => {
+// Get Recipe by ID
+router.get("/recipes/:recipeId", async (req, res) => {
   const { recipeId } = req.params;
-  const updates = req.body;
   try {
-    await Recipe.findByIdAndUpdate(recipeId, updates);
-    res.json({ message: "Recipe updated" });
+    const recipe = await Recipe.findById(recipeId).populate("user");
+    res.json(recipe);
   } catch (error) {
-    res.status(500).json({ message: "Error updating recipe" });
+    res.json({ message: error.message });
   }
 });
 
-//Delete Recipe
-router.delete("/recipes/:recipeId", authMiddleware, async (req, res) => {
-  const { recipeId } = req.params;
-  try {
-    await Recipe.findByIdAndDelete(recipeId);
-    res.json({ message: "Recipe deleted" });
-  } catch (error) {
-    res.status(500).json({ message: "Error deleting recipe" });
+//Update Recipe
+router.put(
+  "/recipes/:recipeId",
+  authMiddleware,
+  checkRole(["admin"]),
+  async (req, res) => {
+    const { recipeId } = req.params;
+    const updates = req.body;
+    try {
+      await Recipe.findByIdAndUpdate(recipeId, updates);
+      res.json({ message: "Recipe updated" });
+    } catch (error) {
+      res.status(500).json({ message: "Error updating recipe" });
+    }
   }
-});
+);
+
+//Delete Recipe
+router.delete(
+  "/recipes/:recipeId",
+  authMiddleware,
+  checkRole(["admin"]),
+  async (req, res) => {
+    const { recipeId } = req.params;
+    try {
+      await Recipe.findByIdAndDelete(recipeId);
+      res.json({ message: "Recipe deleted" });
+    } catch (error) {
+      res.status(500).json({ message: "Error deleting recipe" });
+    }
+  }
+);
 
 module.exports = router;

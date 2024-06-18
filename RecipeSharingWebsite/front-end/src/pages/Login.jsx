@@ -1,23 +1,35 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Form, Input, Button, message } from 'antd'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext'
 
 function Login() {
     const [loading, setLoading] = useState(false);
+    const { login } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const onFinish = (values) => {
+    const onFinish = async (values) => {
         setLoading(true);
-        axios.post('http://localhost:3000/apiAuth/login', values)
-            .then(response => {
-                localStorage.setItem('token', response.data.token);
-                message.success('Login successful');
-                navigate('/');
-            }).catch(error => {
-                message.error('Login failed!');
-                setLoading(false);
-            })
+        // axios.post('http://localhost:3000/apiAuth/login', values)
+        //     .then(response => {
+        //         localStorage.setItem('token', response.data.token);
+        //         message.success('Login successful');
+        //         navigate('/');
+        //     }).catch(error => {
+        //         message.error('Login failed!');
+        //         setLoading(false);
+        //     })
+        try {
+            await login(values);
+            message.success('Login successful!')
+            navigate('/');
+        } catch (error) {
+            message.error('Login failed');
+            console.log(error)
+            setLoading(false);
+        }
+
     }
     return (
         <Form name='login' onFinish={onFinish}>

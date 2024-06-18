@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Input, Button, message } from 'antd'
+import { Form, Input, Button, message, Select } from 'antd'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -28,6 +28,13 @@ function Register() {
             </Form.Item>
             <Form.Item name="password" rules={[{ required: true, message: 'Please input your password!' }]}>
                 <Input.Password placeholder='Password'></Input.Password>
+            </Form.Item>
+            <Form.Item name="role" rules={[{ required: true, message: 'Please select a role!' }]}>
+                <Select placeholder="Select a role">
+                    <Option value="user">User</Option>
+                    <Option value="admin">Admin</Option>
+                </Select>
+
             </Form.Item>
             <Form.Item>
                 <Button type='primary' htmlType='submit' loading={loading}>Register</Button>
